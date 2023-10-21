@@ -37,7 +37,7 @@ class Triangle {
 
     public Triangle(Point[] vertices) {
         if (vertices.length != 3) {
-            throw new IllegalArgumentException("A triangle must have exactly 3 vertices.");
+            throw new IllegalArgumentException("A triangle can only have exactly 3 vertices.");
         }
         this.vertices = vertices;
     }
@@ -65,11 +65,11 @@ class Triangle {
         boolean isIsosceles = (sideLengths[0] == sideLengths[1] || sideLengths[1] == sideLengths[2] || sideLengths[0] == sideLengths[2]);
 
         if (isEquilateral) {
-            return "Equilateral";
+            return "It is Equilateral Triangle";
         } else if (isIsosceles) {
-            return "Isosceles";
+            return "It is Isosceles Triangle";
         } else {
-            return "Unknown";
+            return "Unknown Triangle";
         }
     }
 
@@ -114,7 +114,7 @@ public class assignment1 {
 
             System.out.print("Enter the x-coordinate of a point to check if it's inside the triangle: ");
             double pointX = scanner.nextDouble();
-            System.out.print("Enter the y-coordinate of the point: ");
+            System.out.print("Enter the y-coordinate of the point to check if it's inside the triangle: ");
             double pointY = scanner.nextDouble();
 
             Point testPoint = new Point(pointX, pointY);
